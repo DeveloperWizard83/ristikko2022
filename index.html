@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+<meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Ristikko</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+
+
+
+</head>
+<body>
+    
+    <div class="canvas">
+
+    <div class="left-column">
+        <!-- Tähän lisätään PNG-tiedosto -->
+        <img src="vasen-laita.png" alt="Kuvaus" class="png-image">
+    </div>
+    <div class="top-image-container">
+            <img src="ylä-laita-kysymykset.png" alt="Top Image" class="top-png-image">
+        </div>
+        <div class="banner-container">
+            <img src="banneri.png" alt="Banner image" class="banner-image">
+
+        </div>
+    <div class="grid-container">
+        
+        <!-- Tässä voit lisätä tarvittavat ruudut -->
+        <div class="grid-item" id="cell-1"></div>
+        <div class="grid-item" id="cell-2"></div>
+        <div class="grid-item" id="cell-3"></div>
+        <div class="grid-item" id="cell-4"></div>
+        <div class="grid-item" id="cell-5"></div>
+        <div class="grid-item special-1" data-special="true"></div>
+        <div class="grid-item" id="cell-7"></div>
+        <div class="grid-item" id="cell-8"></div>
+        <div class="grid-item" id="cell-9"></div>
+        <div class="grid-item right" id="cell-10"></div>
+        <div class="grid-item" id="cell-11"><span class="static-number">1</span></div>
+        <div class="grid-item" id="cell-12"></div>
+        <div class="grid-item" id="cell-13"></div>
+        <div class="grid-item" id="cell-14"></div>
+        <div class="grid-item" id="cell-15"></div>
+        <div class="grid-item special-2" data-special="true"></div>
+        <div class="grid-item" id="cell-16"></div>
+        <div class="grid-item" id="cell-17"></div>
+        <div class="grid-item" id="cell-18"></div>
+        <div class="grid-item right" id="cell-19"></div>
+        <div class="grid-item" id="cell-20"></div>
+        <div class="grid-item" id="cell-21"></div>
+        <div class="grid-item" id="cell-22"></div>
+        <div class="grid-item" id="cell-23"></div>
+        <div class="grid-item" id="cell-107" ></div>
+        <div class="grid-item" id="cell-24"></div>
+        <div class="grid-item" id="cell-25"></div>
+        <div class="grid-item" id="cell-26"></div>
+        <div class="grid-item" id="cell-27"></div>
+        <div class="grid-item right" id="cell-28"></div>
+        <div class="grid-item" id="cell-29"></div>
+        <div class="grid-item" id="cell-30"></div>
+        <div class="grid-item" id="cell-31"></div>
+        
+        <div class="grid-item" id="cell-32"></div>
+        <div class="grid-item" id="cell-33"></div>
+        <div class="grid-item special-3" data-special="true"></div>
+        <div class="grid-item" id="cell-35"></div>
+        <div class="grid-item" id="cell-36"></div>
+        <div class="grid-item" id="cell-37"></div>
+        <div class="grid-item right" id="cell-38"><span class="static-number">2</span></div>
+        <div class="grid-item" id="cell-112"></div>
+        <div class="grid-item" id="cell-39"><span class="static-number">3</span></div>
+        <div class="grid-item" id="cell-40"></div>
+        <div class="grid-item" id="cell-41"></div>
+        <div class="grid-item" id="cell-42"></div>
+        <div class="grid-item" id="cell-43"></div>
+        <div class="grid-item" id="cell-44"></div>
+        <div class="grid-item" id="cell-45"></div>
+        <div class="grid-item" id="cell-46"></div>
+        <div class="grid-item special-4" data-special="true"></div>
+        <div class="grid-item" id="cell-48"></div>
+        <div class="grid-item" id="cell-34"></div>
+        <div class="grid-item" id="cell-47"></div>
+        <div class="grid-item" id="cell-58"></div>
+        
+        <div class="grid-item" id="cell-49"></div>
+        <div class="grid-item special-5" data-special="true"></div>
+        
+        <div class="grid-item" id="cell-50"></div>
+        <div class="grid-item" id="cell-51"><span class="static-number">4</span></div>
+        <div class="grid-item" id="cell-52"></div>
+        <div class="grid-item right" id="cell-53"></div>
+        <div class="grid-item" id="cell-54"></div>
+        <div class="grid-item special-6" data-special="true"></div>
+        <div class="grid-item special-7" data-special="true"></div>
+        <div class="grid-item special-8" data-special="true"></div>
+        <div class="grid-item special-9" data-special="true"></div>
+        <div class="grid-item special-10" data-special="true"></div>
+        <div class="grid-item special-11" data-special="true"></div>
+        
+        <div class="grid-item" id="cell-55"></div>
+        <div class="grid-item special-12" data-special="true"></div>
+        <div class="grid-item right" id="cell-56"></div>
+        <div class="grid-item" id="cell-59"></div>
+        <div class="grid-item" id="cell-60"></div>
+        
+        <div class="grid-item" id="cell-62"><span class="static-number">5</span></div>
+        <div class="grid-item" id="cell-63"></div>
+        <div class="grid-item" id="cell-64"></div>
+        <div class="grid-item special-13" data-special="true"></div>
+        <div class="grid-item" id="cell-65"></div>
+        
+        <div class="grid-item" id="cell-66"></div>
+        <div class="grid-item" id="cell-72" ></div>
+        <div class="grid-item right" id="cell-73"></div>
+        <div class="grid-item" id="cell-67" ></div>
+        <div class="grid-item" id="cell-68" ></div>
+        
+        <div class="grid-item" id="cell-67" ></div>
+        <div class="grid-item" id="cell-68" ></div>
+        <div class="grid-item" id="cell-69" ></div>
+        <div class="grid-item right" id="cell-70" ></div>
+        <div class="grid-item" id="cell-71" ></div>
+       
+        
+        <div class="grid-item" id="cell-74" ></div>
+        <div class="grid-item" id="cell-75" ></div>
+        <div class="grid-item right" id="cell-76" ></div>
+        <div class="grid-item" id="cell-77" ></div>
+        <div class="grid-item" id="cell-78" ></div>
+        <div class="grid-item" id="cell-79" ></div>
+        <div class="grid-item right" id="cell-80" ></div>
+       
+        <div class="grid-item" id="cell-82" ></div>
+        <div class="grid-item special-14" data-special="true"></div>
+        <div class="grid-item" id="cell-83" ></div>
+        <div class="grid-item" id="cell-84" ></div>
+        <div class="grid-item" id="cell-85"><span class="static-number">6</span></div>
+        <div class="grid-item right" id="cell-86" ></div>
+        <div class="grid-item" id="cell-87" ></div>
+        <div class="grid-item" id="cell-88" ></div>
+        <div class="grid-item" id="cell-89" ></div>
+        <div class="grid-item right" id="cell-90" ></div>
+        <div class="grid-item" id="cell-91" ></div>
+        <div class="grid-item special-15" data-special="true"></div>
+        <div class="grid-item" id="cell-92" ></div>
+        <div class="grid-item" id="cell-93" ></div>
+        
+        <div class="grid-item" id="cell-94" ></div>
+        <div class="grid-item right" id="cell-95" ></div>
+        <div class="grid-item bottom" id="cell-96" ></div>
+        <div class="grid-item bottom" id="cell-97" ></div>
+        <div class="grid-item bottom" id="cell-98" ></div>
+        <div class="grid-item bottom" id="cell-99" ></div>
+        <div class="grid-item bottom" id="cell-100" ></div>
+        
+        <div class="grid-item bottom" id="cell-102" ></div>
+        <div class="grid-item bottom" id="cell-103" ></div>
+        <div class="grid-item bottom" id="cell-104"><span class="static-number">7</span></div>
+        <div class="grid-item bottom" id="cell-105" ></div>
+        <div class="grid-item bottom-right" id="cell-106" ></div>
+        
+        
+    
+        
+        <!-- Jatka näin 12 korkeussuunnassa ja 10 leveyssuunnassa -->
+    </div>
+   <!--  <p>Laadinta ja toteutus Arto Kuivanen. Vaikeusaste 2-/3.</p>-->
+
+</div>
+
+
+
+
+        <!-- Button to open the help modal -->
+        <div class="button-container">
+            <button id="helpButton" class="help-button">Ohjeet</button>
+            <button id="checkButton" class="check-button">Tarkista ristikko</button>
+            <button id="eraseCrosswordButton" class="erase-crossword-button">Tyhjennä ristikko</button>
+            <button id="sendReply" class="send-reply" onclick="redirectToForm()">Lähetä vastaus</button>
+           <!--  <button id="downloadBtn" class="download-button">Lataa ristikko</button>-->
+           
+           <button id="tarkistaSana" class="tarkista-sana">Tarkista ratkaisusana</button>
+           <input type="text" id="crossword-input" style="display: none;" />
+           <div id="result"></div>
+
+           <!-- <button id="capture" class="download-crossword-button">Lataa ristikko</button> -->
+        </div>
+
+<!-- The Modal -->
+<div id="helpModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Kirjoittaminen</h2>
+    <p>Valitse ruutu ja kirjoitussuunta ja voit aloittaa kirjoittamisen. Kirjoitussuuntaa voit vaihtaa painamalla valittua ruutua. Kirjaimia voi poistaa peruutus tai delete näppäimellä.</p>
+    <h2>Ristikon tallennus</h2>
+    <p>Ristikko tallentuu automaattisesti selaimen muistiin jokaisen muutoksen jälkeen. Kun ristikkoon palaa myöhemmin lataa se automaattisesti pelin siitä kohtaa johon se jäi. 
+        Selaimen muistien tyhjennys voi hävittää kirjaimet ristikosta.
+    </p>
+    <h2>Ristikon ratkaisu</h2>
+    <p>Kun olet täyttänyt ristikon voit tarkistaa "Tarkista ristikko" -napilla saitko ratkaistua ristikon oikein. Voit osallistua arvontaan lähettämällä ratkaisusanan support@seemoto.com sähköpostiiin.
+    </p>
+  </div>
+  
+</div>
+
+<script src="script.js"></script>
+
+
+
+
+
+</body>
+</html>

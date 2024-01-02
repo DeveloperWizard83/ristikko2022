@@ -1,0 +1,601 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Dosis'; 
+    
+    
+}
+
+/* Create a canvas for all elements */
+.canvas {
+    position: relative;
+   
+    
+    
+
+}
+
+/* Add styles for the grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 2cm);
+    grid-template-rows: repeat(12, 2cm);
+    position: relative;
+    margin-top: 500px; /* Adjust the value as needed */
+ 
+
+    
+}
+
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 3px solid #000;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    position: relative; /* Position added here */
+}
+
+.special-1{
+    background-image: url('eka-kysymys.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center center;
+    border-bottom: white;
+    border-top: white;
+    pointer-events: none;
+    background-color: white;
+
+  
+}
+
+.special-2{
+
+    background-image: url('toka-kysymys.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    border-top: none;
+    pointer-events: none;
+}
+
+.special-3{
+
+    background-image: url('kolmas-kysymys.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    border-right: none;
+    pointer-events: none;
+   
+}
+
+.special-4{
+
+    background-image: url('neljäs-kysymys.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    
+    pointer-events: none;
+    border-right: 8px solid #000;
+
+}
+
+.special-5{
+
+    background-image: url('viides-kysymys.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
+    
+    border-bottom: none;
+    
+    pointer-events: none;
+   
+}
+
+.special-6{
+
+    background-image: url('kuudes-kysymys.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+   
+   border-right: none;
+    
+    pointer-events: none;
+   
+}
+
+.special-7{
+
+    background-image: url('7-kysymys.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+   border-right: none;
+   
+    border-left: none;
+    pointer-events: none;
+   
+}
+
+.special-8{
+    background-image: url('8-kysymys.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  border-left: none;
+  border-right: none;
+    pointer-events: none;
+    
+}
+
+.special-9{
+    background-image: url('9-kysymys.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 120%;
+  border-left: none;
+  border-right: none;
+    pointer-events: none;
+}
+
+.special-10{
+
+    background-image: url('10-kysymys.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    border-right: none;
+    border-bottom: none;
+    pointer-events: none;
+    border-top: none;
+    border-left: none;
+    
+    
+   
+}
+
+.special-11{
+
+    background-image: url('11-kysymys.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    border-right: none;
+    border-left: none;
+    pointer-events: none;
+    margin-right: 1px;
+ 
+    
+   
+}
+
+.special-12{
+
+    background-image: url('12-kysymys.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    
+    
+    pointer-events: none;
+   
+}
+
+.special-13{
+
+    background-image: url('13-kysymys.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding-right: 3px;
+    border-top: none;
+    pointer-events: none;
+   
+   
+}
+
+.special-14{
+
+    background-image: url('14-kysymys.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    border-bottom: none;
+    
+   
+    pointer-events: none;
+   
+}
+
+.special-15{
+
+    background-image: url('15-kysymys.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 90%;
+    border-top: none;
+    
+    pointer-events: none;
+   
+}
+
+.special-16{
+
+    background-image: url('16-kysymys.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    
+    border-left: none;
+    pointer-events: none;
+   
+}
+
+
+/* Styles for the left image */
+.png-image {
+    width: 150px;
+    height: 770px;
+    max-height: 100%;
+    position: absolute;
+    top: 640px;
+    right: 753px;
+    transform-origin: bottom;
+    transform: scaleY(1.34);
+    margin-top: 16px;
+}
+
+/* Styles for the top image container */
+.top-image-container {
+    position: absolute;
+    top: 0;
+   margin-top: 400px;
+    
+}
+
+/* Styles for the top image */
+.top-png-image {
+    width: 833px;
+    height: 100px;
+    transform: translateX(-51px);
+   
+    
+}
+
+/* Styles for the banner container */
+.banner-container {
+    position: absolute;
+    top: -201px;
+    
+    left: 40px;
+    width: 530px;
+    height: 100px;
+     /* Increase the z-index for the banner */
+    margin-left: -177px;
+    
+    
+}
+
+/* Styles for the banner image */
+.banner-image {
+    width: 899px;
+    height: 401px;
+    margin-top: 200px;
+    border-right: 3px solid #000;
+    border-left: 1px solid #000; 
+   
+   
+}
+
+.blue {
+    background-color: lightblue;
+}
+
+p{
+
+    margin-left: 300px;
+    font-size: 22px;
+}
+
+
+
+.right{
+    border-right: 8px solid #000;
+}
+    
+
+
+
+.bottom{
+    border-bottom: 8px solid #000;
+    
+}
+
+.bottom-right{
+    border-bottom: 8px solid #000;
+    border-right: 8px solid #000;
+}
+.check-button {
+    /* Your styles for the button */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.check-button:hover {
+    background-color: #45a049;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Style for the help button */
+  .help-button {
+    background-color: #1876b3;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    
+    font-size: 16px;
+    margin-left: 20px; 
+    margin-bottom: 10px;
+    
+}
+  
+  .help-button:hover {
+    background-color: #e31e0a;
+  }
+
+/* Additional styles */
+.static-number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 0.7em;
+    color: #333;
+    pointer-events: none;
+    font-weight: 800;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+
+.crossword-section {
+  page-break-inside: avoid;
+}
+
+.erase-crossword-button {
+    /* Your styles for the button */
+    background-color: #1876b3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.erase-crossword-button:hover {
+   background-color: #e31e0a;
+}
+
+
+.download-crossword-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    
+    font-size: 16px;
+    margin-left: 20px; 
+    margin-bottom: 10px;
+    
+}
+  
+  .download-crossword-button:hover {
+    background-color: #e31e0a;
+  }
+
+  /* Existing styles */
+
+  .active {
+    background-color: lightblue; /* Light blue for active items */
+}
+
+.selected {
+    background-color: #6aa7cc; /* Darker blue for the selected item */
+}
+
+.send-reply {
+    /* Your styles for the button */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.send-reply:hover {
+    background-color: #45a049;
+}
+
+.hide {
+    display: none !important;
+}
+
+
+.tarkista-sana {
+    /* Your styles for the button */
+    background-color: #1876b3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.tarkista-sana:hover {
+    background-color: #e31e0a;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    
+    body {
+        overflow-x: hidden; /* Prevent body from scrolling */
+        box-sizing: border-box;
+    }
+
+    .canvas {
+        width: initial; /* Reset any width constraints */
+        min-width: 100%; /* Ensure canvas is at least the width of the viewport */
+        overflow-x: auto; /* Enable horizontal scrolling for the canvas */
+        max-width: 100%;
+        max-height: 1000%;
+        z-index: 1;
+    }
+
+    .grid-container {
+        width: max-content; /* Allow grid to be as wide as it needs to be */
+        
+        max-width: none;
+        overflow-x: visible;
+        
+    }
+   
+
+    .png-image {
+        width: 200px; /* Adjust width as necessary */
+        height: 770px; /* Adjust height to maintain aspect ratio */
+        
+        position: absolute;
+       left: 0;
+       
+        
+     
+        z-index: 1; /* Ensure it's above other elements */
+    }
+
+   
+
+    /* Add any additional styles needed for smaller screens */
+}
+
+/* Media query for mobile devices */
+@media screen and (max-height: 768px) {
+    
+    body {
+        overflow-x: hidden; /* Prevent body from scrolling */
+        box-sizing: border-box;
+    }
+
+    .canvas {
+        width: initial; /* Reset any width constraints */
+        min-width: 100%; /* Ensure canvas is at least the width of the viewport */
+        overflow-x: auto; /* Enable horizontal scrolling for the canvas */
+        max-width: 100%;
+        max-height: 1000%;
+        z-index: 1;
+    }
+
+    .grid-container {
+        width: max-content; /* Allow grid to be as wide as it needs to be */
+        
+        max-width: none;
+        overflow-x: visible;
+        
+    }
+   
+
+    .png-image {
+        width: 200px; /* Adjust width as necessary */
+        height: 770px; /* Adjust height to maintain aspect ratio */
+        
+        position: absolute;
+       left: -100;
+       
+        
+     
+        z-index: 1; /* Ensure it's above other elements */
+    }
+
+   
+
+    /* Add any additional styles needed for smaller screens */
+}
